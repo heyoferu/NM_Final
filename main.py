@@ -2,12 +2,21 @@ def menu():
     # initial menu
     # 
     numericMethods = [
-        "Error",
-        "Bisec"
+        "Error absoluto",
+        "Error relativo",
+        "Bisec",
+        "Newton-Raphson",
+        "Jacobi",
+        "Newton",
+        "Gauss-Seidel",
+        "Lagrange",
+        "Trapecio",
+        "Simpson 1/3",
+        "Euler"
     ]
 
     for i in numericMethods:
-        print(i)
+        print(numericMethods.index(f"{i}")+1," )",i)
         
     selection = input("Type the number method:\t")
 
