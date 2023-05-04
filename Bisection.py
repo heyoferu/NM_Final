@@ -1,11 +1,13 @@
 from math import e as euler
 from sympy import *
-from tabulate import tabulate
+from prettytable import PrettyTable
+from gui import create_table
 
 
 def bisec(xi,xu, iteration):
 
     tabla = []
+    headers = ["xi","xu","xr"]
     eq = input("Type equation:\t")
     f = lambda x: parse_expr(eq).subs('x',x)
 
@@ -13,7 +15,7 @@ def bisec(xi,xu, iteration):
             xr = (xi + xu) / 2
 
             
-            tabla.append([i,xi,xu,xr])
+            tabla.append([xi,xu,xr])
             
             if f(xi) * f(xr) < 0:
                 xu = xr
@@ -24,5 +26,4 @@ def bisec(xi,xu, iteration):
             if f(xi) * f(xr) == 0:
                  break
 
-    return print(tabulate(tabla,headers=["i","xi","xu","xr"]))
-
+    create_table(headers,tabla)

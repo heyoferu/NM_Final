@@ -1,3 +1,13 @@
+from Error import error, errorRel
+from Bisection import bisec
+from newtonRaphson import NR
+from Newton import newton
+from Jacobi import jacobi
+from gaussSeidel import gs
+from Lagrangage import lagrange
+import trap
+import simp2 as s1_3
+import Euler
 def menu():
     # initial menu
     # 
@@ -18,10 +28,43 @@ def menu():
     for i in numericMethods:
         print(numericMethods.index(f"{i}")+1," )",i)
         
-    selection = input("Type the number method:\t")
+    selection = int(input("Type the number method:\t"))
 
     match selection:
         case 1:
-            pass
+            print("Error absoluto")
+            error()
 
+        case 2:
+            print("Error relativo")
+            errorRel(180,5)
+
+        case 3:
+            print("Bisección")
+            bisec(1,2,10)
+
+        case 4:
+            print("Newton-Raphson")
+            NR(10,4)
+        case 5:
+            print("Jacobi")
+            jacobi()
+        case 6:
+            print("Newton")
+            newton()
+        case 7:
+            print("Gauss-seidel")
+            gs()
+        case 8:
+            print("Lagrange")
+            lagrange()
+        case 9:
+            print("Trapecio")
+            trap()
+        case 10:
+            print("Simpson 1/3")
+            s1_3()
+        case 11:
+            print("Euler")
+            Euler()
 menu()
