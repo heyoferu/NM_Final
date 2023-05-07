@@ -5,9 +5,9 @@ from Newton import newton
 from Jacobi import jacobi
 from gaussSeidel import gs
 from Lagrangage import lagrange
-import trap
-import simp2 as s1_3
-import Euler
+from trap import trap
+from simp2 import S1_2
+from Euler import euler
 def menu():
     # initial menu
     # 
@@ -63,8 +63,8 @@ def menu():
             trap()
         case 10:
             print("Simpson 1/3")
-            s1_3()
+            S1_2()
         case 11:
             print("Euler")
-            Euler()
+            euler()
 menu()
