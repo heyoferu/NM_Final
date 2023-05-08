@@ -4,7 +4,10 @@ from prettytable import PrettyTable
 from gui import create_table
 
 
-def bisec(xi,xu, iteration):
+def bisec():
+    xi = float(input("Valor de xi:\t"))
+    xu = float(input("Valor de xu:\t"))
+    iteration = int(input("Número de iteraciones:\t"))
 
     tabla = []
     headers = ["xi","xu","xr"]

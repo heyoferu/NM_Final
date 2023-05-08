@@ -3,7 +3,9 @@ from tabulate import tabulate as tb
 from math import e, log
 from gui import create_table
 
-def NR(iterations,x):
+def NR():
+    x = float(input("Valor inicial:\t"))
+    iterations = float(input("Numero de iteraciones:\t"))
     table = []
     f = input("Type equation:\t")
     dx = str(diff(f))

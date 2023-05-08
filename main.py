@@ -53,15 +53,15 @@ def menu():
 
         case 2:
             print("Error relativo\n")
-            errorRel(180,5)
+            errorRel()
 
         case 3:
             print("Bisección\n")
-            bisec(1,2,10)
+            bisec()
 
         case 4:
             print("Newton-Raphson\n")
-            NR(10,4)
+            NR()
         case 5:
             print("Jacobi\n")
             jacobi()

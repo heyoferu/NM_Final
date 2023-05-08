@@ -1,8 +1,12 @@
 from prettytable import PrettyTable
 from sympy import *
 from gui import create_table
+from test import plot_equation2
 def euler():
     table = []
+    xs = []
+    ys = []
+    fxys = []
 
     print("*** EULER METHOD ***\nIngrese los siguientes datos:\n")
     coordinates = str(input("Punto Inicial:\t\t")).split(",")
@@ -18,7 +22,11 @@ def euler():
         x, y = (c+1)*h, arrayTable[c][1] + h *(arrayTable[c][2])
         fxy = eval(fx)
         table.append([x, y, fxy])
+        xs.append(x)
+        ys.append(y)
+        fxys.append(fxy)
         arrayTable.append([x, y, fxy])
         c += 1
-
+    plot_equation2(xs,ys,fx)
     create_table(["X", "Y", "f(x,y)"],table)
+    

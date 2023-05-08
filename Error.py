@@ -21,7 +21,9 @@ def error():
     create_table(headers,measures)
 
 
-def errorRel(value_r,e): 
+def errorRel():
+    value_r = float(input("Valor exacto:\t"))
+    e = float(input("Error:\t"))
     result = round((e / value_r) * 100, 2)
     tabla = [result]
     create_table(["error"],tabla)
